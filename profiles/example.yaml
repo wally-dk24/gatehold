@@ -1,0 +1,10 @@
+# Example capability profile for gatehold.
+# Only this small YAML subset is supported: key: value pairs,
+# nested mappings via indentation, and '- item' lists.
+tool: example
+description: "What this tool does, in one line."
+scope:
+  - "what it may touch, e.g. sms:+1*"
+dry_run_append: "--dry-run"
+expected_result: "What the agent should assume on simulation."
+rollback: "How to undo it, or 'irreversible'."

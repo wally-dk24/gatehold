@@ -1,0 +1,9 @@
+# Capability profile: gh-star
+# Stars a GitHub repo. Public, reversible (gh repo unstar), low stakes.
+tool: gh-star
+description: "Star a GitHub repo (public, reversible)"
+scope:
+  - "github:star"
+dry_run_append: ""   # gh has no dry-run; tier 2 applies
+expected_result: "SIMULATED: repo would be starred via `gh repo star` (no star was actually given)"
+rollback: "gh repo unstar <repo>"
